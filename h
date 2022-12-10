@@ -25,7 +25,7 @@ end
 end
 end)
 
-Notify({Title="Hitbox Expander Loaded";Text="Toggle is V"..game.Players.LocalPlayer.Name})
+Notify({Title="Hitbox Expander Loaded";Text="Toggle is V "..game.Players.LocalPlayer.Name})
 local OldFunction
 local tPLayer
 local Event

@@ -1,0 +1,130 @@
+local ServerFunction 
+
+if game:GetService("Players").LocalPlayer:FindFirstChild("ServerFunction1") then
+    ServerFunction = game:GetService("Players").LocalPlayer.ServerFunction1
+end
+if game:GetService("Players").LocalPlayer:FindFirstChild("ServerFunction") then
+    ServerFunction = game:GetService("Players").LocalPlayer.ServerFunction
+end
+if game:GetService("Players").LocalPlayer:FindFirstChild("GwyneddFunction") then
+    ServerFunction = game:GetService("Players").LocalPlayer.GwyneddFunction
+end
+if game:GetService("Players").LocalPlayer:FindFirstChild("GweinyddFunction") then
+    ServerFunction = game:GetService("Players").LocalPlayer.GweinyddFunction
+end
+if game:GetService("Players").LocalPlayer:FindFirstChild("GwyneddFunctionDau") then
+    ServerFunction = game:GetService("Players").LocalPlayer.GwyneddFunctionDau
+end
+if game:GetService("Players").LocalPlayer:FindFirstChild("BigmanFunction") then
+    ServerFunction = game:GetService("Players").LocalPlayer.BigmanFunction
+end
+
+print("Function not found retard")
+
+if ServerFunction == nil then return end
+local args = {
+    [1] = "updateStats",
+    [2] = {
+        ["Inventory"] = {
+            [1] = {
+                ["Name"] = "Kingsguard Guardsman",
+                ["Stack"] = 0,
+            },
+            [2] = {
+                ["Name"] = "Booster Sword",
+                ["Stack"] = 0,
+            },
+            [3] = {
+                ["Name"] = "Rapier",
+                ["Stack"] = 0,
+            },
+            [4] = {
+                ["Name"] = "Kingsguard Shield",
+                ["Stack"] = 0,
+            },
+            [5] = {
+                ["Name"] = "Kingsguard Helmet",
+                ["Stack"] = 0,
+            },
+            [6] = {
+                ["Name"] = "Kingsguard Sword",
+                ["Stack"] = 0,
+            },
+            [7] = {
+                ["Name"] = "Kingsguard Attendant",
+                ["Stack"] = 0,
+            },
+            [8] = {
+                ["Name"] = "Dragonglass Armor",
+                ["Stack"] = 0,
+            },
+            [10] = {
+                ["Name"] = "Arakh",
+                ["Stack"] = 0,
+            },
+            [11] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+            [12] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+            [13] = {
+            },
+            [14] = {
+            },
+            [15] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+            [16] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+            [17] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+            [18] = {
+                ["Name"] = "",
+                ["Stack"] = 0,
+            },
+        },
+["Materials"] = {
+            ["Leather"] = 50,
+            ["Copper"] = 50,
+            ["Iron"] = 50,
+            ["Gold"] = 50,
+            ["Oak"] = 50,
+            ["Silver"] = 50,
+        },
+        ["Denari"] = 100000,
+        ["Equipped"] = {
+            [1] = {
+            },
+            [2] = {
+            },
+        },
+        ["Body"] = {
+            [1] = {
+
+            },
+            [2] = {
+
+            },
+            [3] = {
+
+            },
+            [4] = {
+
+            },
+            [5] = {
+
+            },
+        },
+    },
+}
+
+ServerFunction:InvokeServer(unpack(args))
+game.Workspace[game.Players.LocalPlayer.Name].Humanoid.Health = 0
